@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     botonCumplido.addEventListener('click', () => {
         const indiceAleatorio = Math.floor(Math.random() * cumplidos.length);
-        mensajeCumplidoDiv.innerHTML = <p>"${cumplidos[indiceAleatorio]}"</p>;
+        mensajeCumplidoDiv.innerHTML = '<p>"${cumplidos[indiceAleatorio]}"</p>';
     });
 
     // --- LÓGICA DE CADA JUEGO ---
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <table id="sopa-grid"></table>
                 <div id="sopa-palabras-lista">
                     <h3>Palabras a encontrar:</h3>
-                    <ul>${palabras.map(p => <li data-palabra="${p}">${p}</li>).join('')}</ul>
+                    <ul>${palabras.map(p => '<li data-palabra="${p}">${p}</li>').join('')}</ul>
                 </div>
             </div>`;
         
@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>Nuestra anécdota del "Cuervo-Gato"</h2>
                 <div class="historia-texto"><p>${nodo.texto}</p></div>
                 <div class="historia-opciones">
-                    ${nodo.opciones.map(op => <button data-destino="${op.llevaA}" data-fin="${op.fin || false}">${op.texto}</button>).join('')}
+                    ${nodo.opciones.map(op => '<button data-destino="${op.llevaA}" data-fin="${op.fin || false}">${op.texto}</button>').join('')}
                 </div>`;
         }
 
