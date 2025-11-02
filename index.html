@@ -1,116 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I LOVIU KARI</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="anciano.jpg" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tortillería Camacho</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <h1>¡Una sorpresita para ti corazon!</h1>
-        <p>He creado este pequeñito rincón de internet solo para ti. Espero te guste</p>
-    </header>
-
-    <main class="grid-juegos">
-        <section id="rompecabezas" class="seccion-juego">
-            <div class="contenido-juego">
-                <div class="icono-juego">🧩</div>
-                <h2>El Rompecabezas Obscuro</h2>
-                <p>Arrastra las piezas al marco para revelar una foto especial.</p>
-                <button class="boton-jugar" data-juego="rompecabezas">Jugar</button>
-            </div>
-            <div class="candado-superpuesto">
-                <div class="icono-candado"></div>
-            </div>
-        </section>
-
-        <section id="memorama" class="seccion-juego">
-            <div class="contenido-juego">
-                <div class="icono-juego">🧠</div>
-                <h2>Memorama Peligroso</h2>
-                <p>Encuentra los pares de nuestras fotos y momentos favoritos.</p>
-                <button class="boton-jugar" data-juego="memorama">Jugar</button>
-            </div>
-            <div class="candado-superpuesto gris">
-                <div class="icono-candado">🔒</div>
-            </div>
-        </section>
-
-        <section id="sopa-letras" class="seccion-juego">
-            <div class="contenido-juego">
-                <div class="icono-juego">✍️</div>
-                <h2>¿Sopa de 6 Letras?</h2>
-                <p>Encuentra las palabras que definen nuestra amistad.</p>
-                <button class="boton-jugar" data-juego="sopa-letras">Jugar</button>
-            </div>
-            <div class="candado-superpuesto gris">
-                <div class="icono-candado">🔒</div>
-            </div>
-        </section>
-
-        <section id="laberinto" class="seccion-juego">
-            <div class="contenido-juego">
-                <div class="icono-juego">🗺️</div>
-                <h2>Laberinto del Pasado</h2>
-                <p>Guíame a través del laberinto para que nos encontremos JAJA.</p>
-                <button class="boton-jugar" data-juego="laberinto">Jugar</button>
-            </div>
-            <div class="candado-superpuesto gris">
-                <div class="icono-candado">🔒</div>
-            </div>
-        </section>
-
-        <section id="historia" class="seccion-juego">
-            <div class="contenido-juego">
-                <div class="icono-juego">😂</div>
-                <h2>¿La mejor Anécdota?"</h2>
-                <p>Revive nuestra graciosa confusión en la escuela.</p>
-                <button class="boton-jugar" data-juego="historia">Jugar</button>
-            </div>
-            <div class="candado-superpuesto gris">
-                <div class="icono-candado">🔒</div>
-            </div>
-        </section>
-    </main>
-
-    <div class="secciones-extra">
-        <section id="galeria-seccion">
-            <h2>🏆 Galería de Recompensas 🏆</h2>
-            <p>Por cada juego que completes, desbloquearás un video especial aquí.</p>
-            <div id="galeria-videos">
-                </div>
-        </section>
-
-        <section id="playlist-seccion">
-            <h2>Te dedico esta cancion del Duko 🎶</h2>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/track/2ypbIXW3a7fsLdLtLpZWDZ?si=QAG32yYHR828aDf3OF9Omw" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </section>
-
-        <section id="cumplidos-seccion">
-            <h2>Un Mensaje Para Ti ✨</h2>
-            <p>Porque te mereces que te lo recuerden siempre.</p>
-            <button id="boton-cumplido">Presiona para leer algo bonito</button>
-            <div id="mensaje-cumplido">
-                <p>Gracias por todo el apoyo que me has brindado durante demasiado tiempo, siempre estuviste para mi en los peores momentos además hiciste de mi una muchisimo mejor persona, eres el unico pilar de mi vida que necesito. Me enseñaste demasiadas cosas a lo largo de nuestra amistad y aun sigo aprendiendo de ti, cuando tu mundo se caiga a pedazos recuerda que tienes el mio</p>
-            </div>
-        </section>
+  <div class="container">
+    <div class="logo">
+      <h1>🌽 Tortillería Camacho 🌽</h1>
+      <p>El sabor de la tradición mexicana</p>
     </div>
 
-    <footer>
-        <p>Hecho con mucho cariño para la mejor amiga del mundo ❤️</p>
-    </footer>
+    <!-- Panel de Inicio de Sesión -->
+    <div class="form-container" id="login-form">
+      <h2>Iniciar Sesión 🫓</h2>
+      <form>
+        <label for="email">📧 Correo electrónico</label>
+        <input type="email" id="email" placeholder="ejemplo@correo.com" required>
 
-    <div id="modal-juego" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar-modal">&times;</span>
-            <div id="contenedor-juego-modal">
-                </div>
+        <label for="password">🔒 Contraseña</label>
+        <input type="password" id="password" placeholder="********" required>
+
+        <div class="remember">
+          <input type="checkbox" id="remember">
+          <label for="remember">Recordarme</label>
         </div>
+
+        <button type="submit" class="btn btn-login">🍽️ Iniciar sesión</button>
+      </form>
+
+      <p class="switch-text">¿Eres nuevo?</p>
+      <button class="btn btn-register" onclick="mostrarRegistro()">🌮 Crear cuenta</button>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Panel de Registro -->
+    <div class="form-container oculto" id="register-form">
+      <h2>Crear Cuenta 🌽</h2>
+      <form>
+        <label for="nombre">👤 Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Juan Pérez" required>
+
+        <label for="correo">📧 Correo electrónico</label>
+        <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+
+        <label for="pass1">🔒 Contraseña</label>
+        <input type="password" id="pass1" placeholder="********" required>
+
+        <label for="pass2">🔒 Confirmar contraseña</label>
+        <input type="password" id="pass2" placeholder="********" required>
+
+        <button type="submit" class="btn btn-register2">🌯 Registrar</button>
+      </form>
+
+      <p class="switch-text">¿Ya tienes cuenta?</p>
+      <button class="btn btn-login" onclick="mostrarLogin()">🫓 Iniciar sesión</button>
+    </div>
+  </div>
+
+  <div class="decoraciones">
+    <img src="https://cdn-icons-png.flaticon.com/512/4359/4359860.png" class="tortilla" alt="Tortilla">
+    <img src="https://cdn-icons-png.flaticon.com/512/4359/4359873.png" class="maquina" alt="Máquina de tortillas">
+    <img src="https://cdn-icons-png.flaticon.com/512/4359/4359890.png" class="totopos" alt="Totopos">
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
